@@ -1,0 +1,71 @@
+package com.java.greeks;
+
+public class greeks {
+
+    public static void main(String[] args) {
+
+        // Question 1
+        int real1 = 3;
+        int imaginary1 = 4;
+
+        int real2 = 5;
+        int imaginary2 = 2;
+
+        int real = real1 + real2;
+        int imaginary = imaginary1 + imaginary2;
+
+        System.out.println("Sum: " + real + " + " + imaginary + "i");
+
+
+        // Question 2
+        int number = 25;
+
+        if (number % 2 == 0) {
+            System.out.println(number + " is an Even Number");
+        } else {
+            System.out.println(number + " is an Odd Number");
+        }
+
+
+        // Question 3
+        int x = 7;
+        int y = 20;
+        int z = 56;
+
+        int largest = z > (x > y ? x : y) ? z : ((x > y) ? x : y);
+
+        System.out.println("Largest number is: " + largest);
+
+
+        // Question 4 - LCM
+
+        int a = 12;
+        int b = 18;
+
+        int max = (a > b) ? a : b;
+        int lcm = max;
+
+        while (lcm % a != 0 || lcm % b != 0) {
+            lcm++;
+        }
+
+        System.out.println("LCM of " + a + " and " + b + " is: " + lcm);
+
+
+        // Question 5 - GCD / HCF
+
+        int a1 = 12;
+        int b1 = 18;
+
+        int x1 = a1;
+        int y1 = b1;
+
+        while (y1 != 0) {
+            int remainder = x1 % y1;
+            x1 = y1;
+            y1 = remainder;
+        }
+
+        System.out.println("GCD / HCF of " + a1 + " and " + b1 + " is: " + x1);
+    }
+}
